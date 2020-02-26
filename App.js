@@ -12,9 +12,16 @@ function rollDice() {
 		document.getElementById("d1").innerHTML = "Die 1 is: " +d1;
 		document.getElementById("d2").innerHTML = "Die 2 is: " +d2;
 	} else {
-		var score = d2 + d1;
 		document.getElementById("d1").innerHTML = "Die 1 is: " +d1;
 		document.getElementById("d2").innerHTML = "Die 2 is: " +d2;
-		document.getElementById("score").innerHTML = score;
+		calculateScore();
+		function calculateScore() {
+			if (score = null) {
+				var score = d2 + d1;
+			} else {
+				var score = score + d1 + d2;
+				document.getElementById("score").innerHTML = score;
+			}
+		}
 	}
 }
